@@ -27,5 +27,4 @@ xjs import @xpresser/session configs
 ```
 
 Session is enabled by and sqlite is used as store by default.
-
 Check imported config file for more info.
