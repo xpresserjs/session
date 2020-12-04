@@ -8,8 +8,7 @@ export = ($: DollarSign) => ({
     enabled: true,
 
     /**
-     * Use Default Plugin
-     * // Talk about default plugin here.
+     * Use Default Handler
      */
     useDefault: true,
 
