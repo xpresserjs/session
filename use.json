@@ -1,5 +1,5 @@
 {
-  "namespace": "@xpresser/session",
+  "namespace": "session",
   "use_index": "dist/src/index.js",
   "extends": {
     "RequestEngine": "dist/src/RequestEngine.js"

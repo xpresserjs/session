@@ -23,8 +23,8 @@ The plugin should come before other plugins that requires `session`;
 
 ## Import Configs
 ```shell
-xjs import @xpresser/session configs
+xjs import session configs
 ```
 
 Session is enabled by and sqlite is used as store by default.
-Check imported config file for more info.
+Check imported config file for more info. **configs/session.js**
