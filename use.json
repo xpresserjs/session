@@ -1,0 +1,10 @@
+{
+  "namespace": "@xpresser/session",
+  "use_index": "dist/src/index.js",
+  "extends": {
+    "RequestEngine": "dist/src/RequestEngine.js"
+  },
+  "importable": {
+    "configs": "dist/exports/config.js"
+  }
+}

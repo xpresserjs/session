@@ -1,0 +1,26 @@
+{
+  "name": "@xpresser/session",
+  "version": "1.0.0",
+  "description": "Official session plugin for xpresserjs",
+  "main": "src/index.ts",
+  "types": "types/src/index.d.ts",
+  "repository": "https://github.com/xpresserjs/new-plugin-ts",
+  "author": "xpresserjs",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "private": false,
+  "devDependencies": {},
+  "dependencies": {
+    "@types/node": "^14.14.6",
+    "@xpresser/router": "^1.0.13",
+    "connect-session-knex": "^2.0.0",
+    "express-session": "^1.17.1",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typescript": "^4.0.5",
+    "xpresser": "^0.3.29"
+  }
+}
