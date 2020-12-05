@@ -1,5 +1,5 @@
 import type RequestEngine from "xpresser/src/RequestEngine";
-import { XSession } from "../custom-types";
+import type { XSession } from "../custom-types";
 declare const _default: (RequestEngineClass: typeof RequestEngine) => {
     new (req: any, res: any, next?: (() => void) | undefined, route?: any): {
         session: XSession;

@@ -1,5 +1,5 @@
-import { SessionOptions } from "express-session";
-import { DollarSign } from "xpresser/types";
+import type { SessionOptions } from "express-session";
+import type { DollarSign } from "xpresser/types";
 declare const _default: ($: DollarSign) => {
     /**
      * Enable this plugin
