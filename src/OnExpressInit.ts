@@ -14,10 +14,10 @@ export = (next: () => void): void => {
          */
         if (useDefault) {
             const connectSessionKnex = require("connect-session-knex");
-            const handlerConfig = pluginConfig.get("handlerConfig");
+            const storeConfig = pluginConfig.get("storeConfig");
 
             const KnexSessionStore = connectSessionKnex(session);
-            const knexSessionConfig = handlerConfig;
+            const knexSessionConfig = storeConfig;
 
             const sessionFilePath = knexSessionConfig.connection.filename;
             if (sessionFilePath && !$.file.exists(sessionFilePath)) {
@@ -31,32 +31,32 @@ export = (next: () => void): void => {
 
             const sessionConfig = lodash.extend(
                 {},
-                pluginConfig.get('config'),
+                pluginConfig.get('sessionConfig'),
                 {store}
             );
 
             $.app.use(session(sessionConfig));
         } else {
             /**
-             * Check for custom session handler
+             * Check for custom session store
              */
-            let useCustomHandler: string | false = pluginConfig.get('useCustomHandler', false)
-            if (useCustomHandler !== false) {
-                if (typeof useCustomHandler !== 'string') {
-                    $.logErrorAndExit(`Config: {session.useCustomHandler} only accepts false or path to session handler file.`)
+            let customStore: string | false = pluginConfig.get('customStore', false)
+            if (customStore !== false) {
+                if (typeof customStore !== 'string') {
+                    $.logErrorAndExit(`Config: {session.customStore} only accepts false or path to custom store definition file.`)
                 }
 
-                useCustomHandler = $.path.resolve(useCustomHandler);
-                if (!$.file.exists(useCustomHandler)) {
-                    $.logErrorAndExit(`useCustomHandler File not found: {${useCustomHandler}}`)
+                customStore = $.path.resolve(customStore);
+                if (!$.file.exists(customStore)) {
+                    $.logErrorAndExit(`customStore File not found: {${customStore}}`)
                 }
 
-                const handler = require(useCustomHandler);
-                if (typeof handler !== "function") {
-                    $.logErrorAndExit(`useCustomHandler File must return a function: {${useCustomHandler}}`);
+                const store = require(customStore);
+                if (typeof store !== "function") {
+                    $.logErrorAndExit(`customStore File must return a function: {${customStore}}`);
                 }
 
-                $.app.use(handler(session));
+                $.app.use(store(session));
             }
         }
     }

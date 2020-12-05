@@ -5,6 +5,7 @@
     "RequestEngine": "dist/src/RequestEngine.js"
   },
   "importable": {
-    "configs": "dist/src/exports/config.js"
+    "configs": "dist/src/exports/config.js",
+    "configs.ts": "src/exports/config.ts"
   }
 }

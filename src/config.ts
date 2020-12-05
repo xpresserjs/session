@@ -14,7 +14,7 @@ export const pluginConfig = $.objectCollection(importableConfig($));
 // Add namespace to plugin pluginConfig (optional but recommended)
 pluginConfig.set('namespace', namespace);
 
-// Try to get session from configs/session.js
+// Try to get session from configs/session.(js|ts)
 // File extension was excluded to allow require guess the file.
 // Just in-case it's typescript.
 const configPath = $.path.configs('session');

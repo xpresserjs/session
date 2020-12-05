@@ -8,18 +8,18 @@ export = ($: DollarSign) => ({
     enabled: true,
 
     /**
-     * Use Default Handler
+     * Use Default Store
      */
     useDefault: true,
 
     /**
-     * Use Custom Handler instead of default plugin.
+     * Use Custom Store instead of default plugin.
      * Full, Relative, or Smart Path is expected if not false.
      */
-    customHandler: false,
+    customStore: false,
 
     /**
-     * Default Handler used: `connect-session-knex`
+     * Default Store used: `connect-session-knex`
      * The default settings uses an sqlite file.
      *
      * You can also check other SQL configs of saving your session in databases
@@ -28,7 +28,7 @@ export = ($: DollarSign) => ({
      * See Configuration here
      * https://www.npmjs.com/package/connect-session-knex
      */
-    handlerConfig: {
+    storeConfig: {
         client: "sqlite3",
         connection: {
             filename: $.path.frameworkStorageFolder("sessions.sqlite"),
@@ -45,7 +45,7 @@ export = ($: DollarSign) => ({
      * Check here for full configuration.
      * https://www.npmjs.com/package/express-session
      */
-    config: {
+    sessionConfig: {
         secret: "!XpresserSecretKey!",
         cookie: {
             path: $.config.get('server.root'),

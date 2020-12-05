@@ -5,17 +5,16 @@ declare const _default: ($: DollarSign) => {
      */
     enabled: boolean;
     /**
-     * Use Default Plugin
-     * // Talk about default plugin here.
+     * Use Default Store
      */
     useDefault: boolean;
     /**
-     * Use Custom Handler instead of default plugin.
+     * Use Custom Store instead of default plugin.
      * Full, Relative, or Smart Path is expected if not false.
      */
-    customHandler: boolean;
+    customStore: boolean;
     /**
-     * Default Handler used: `connect-session-knex`
+     * Default Store used: `connect-session-knex`
      * The default settings uses an sqlite file.
      *
      * You can also check other SQL configs of saving your session in databases
@@ -24,7 +23,7 @@ declare const _default: ($: DollarSign) => {
      * See Configuration here
      * https://www.npmjs.com/package/connect-session-knex
      */
-    handlerConfig: {
+    storeConfig: {
         client: string;
         connection: {
             filename: string;
@@ -39,7 +38,7 @@ declare const _default: ($: DollarSign) => {
      * Check here for full configuration.
      * https://www.npmjs.com/package/express-session
      */
-    config: {
+    sessionConfig: {
         secret: string;
         cookie: {
             path: any;
