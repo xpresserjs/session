@@ -1,3 +1,4 @@
+import { SessionOptions } from "express-session";
 import { DollarSign } from "xpresser/types";
 declare const _default: ($: DollarSign) => {
     /**
@@ -9,10 +10,14 @@ declare const _default: ($: DollarSign) => {
      */
     useDefault: boolean;
     /**
-     * Use Custom Store instead of default plugin.
-     * Full, Relative, or Smart Path is expected if not false.
+     * Session Configuration settings
+     * The session plugin used is `express-session`
+     *
+     * The configs below are the minimal required configs.
+     * Check here for full configuration.
+     * https://www.npmjs.com/package/express-session
      */
-    customStore: boolean;
+    sessionConfig: SessionOptions;
     /**
      * Default Store used: `connect-session-knex`
      * The default settings uses an sqlite file.
@@ -31,22 +36,9 @@ declare const _default: ($: DollarSign) => {
         useNullAsDefault: boolean;
     };
     /**
-     * Session Configuration settings
-     * The session plugin used is `express-session`
-     *
-     * The configs below are the minimal required configs.
-     * Check here for full configuration.
-     * https://www.npmjs.com/package/express-session
+     * Use Custom Store instead of default store.
+     * This option will only be checked if useDefault is false.
      */
-    sessionConfig: {
-        secret: string;
-        cookie: {
-            path: any;
-            domain: any;
-            maxAge: number;
-        };
-        resave: boolean;
-        saveUninitialized: boolean;
-    };
+    customStore(use: (options?: SessionOptions | undefined) => any): any;
 };
 export = _default;

@@ -1,9 +1,16 @@
-import {$} from "./config";
+import {$, pluginConfig} from "./config";
 
-export function run(config: any) {
+export function run() {
 
     /**
-     * Register Session on expressInit
+     * Check if plugin is enabled.
      */
-    $.on.expressInit(require('./OnExpressInit'))
+    const sessionIsEnabled = pluginConfig.get("enabled");
+    if (sessionIsEnabled) {
+        /**
+         * Register Session on expressInit
+         */
+        $.on.expressInit(require('./OnExpressInit'))
+    }
+
 }

@@ -1,13 +1,15 @@
 import type RequestEngine from "xpresser/src/RequestEngine";
+import { XSession } from "../custom-types";
 declare const _default: (RequestEngineClass: typeof RequestEngine) => {
     new (req: any, res: any, next?: (() => void) | undefined, route?: any): {
+        session: XSession;
+        sessionID: string;
         req: import("xpresser/types/http").Http.Request;
         res: import("xpresser/types/http").Http.Response;
         $query: import("object-collection");
         $body: import("object-collection");
         params: Record<string, any>;
         store: import("object-collection");
-        session: Record<string, any>;
         route: {
             name: string;
             method: string;

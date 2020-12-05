@@ -26,7 +26,14 @@
     "@types/qs" "*"
     "@types/range-parser" "*"
 
-"@types/express@^4.17.9":
+"@types/express-session@^1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@types/express-session/-/express-session-1.17.3.tgz#4a37c5c4428b8f922ac8ac1cb4bd9190a4d2b097"
+  integrity sha512-57DnyxiqClXOIjoCgeKCUYfKxBPOlOY/k+l1TPK+7bSwyiPTrS5FIk1Ycql7twk4wO7P5lfOVy6akDGiaMSLfw==
+  dependencies:
+    "@types/express" "*"
+
+"@types/express@*", "@types/express@^4.17.9":
   version "4.17.9"
   resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.9.tgz#f5f2df6add703ff28428add52bdec8a1091b0a78"
   integrity sha512-SDzEIZInC4sivGIFY4Sz1GG6J9UObPwCInYJjko2jzOf/Imx/dlpume6Xxwj1ORL82tBbmN4cPDIDkLbWHk9hw==
@@ -79,7 +86,7 @@
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==
 
-"@xpresser/router@^1.0.13", "@xpresser/router@^1.0.17":
+"@xpresser/router@^1.0.17":
   version "1.0.17"
   resolved "https://registry.yarnpkg.com/@xpresser/router/-/router-1.0.17.tgz#5007f910ebb370002e3892b1c390c754ca9bcf81"
   integrity sha512-nkaKpYtoRwWQExqNRO2Oh3rLP5BFIhSVPjeAx7clhCoRyUb3n3Wsz80NH7Z7BlH4xuL02BPlPa+g9sycyfhBnA==
@@ -2939,10 +2946,10 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-xpresser@^0.3.29:
-  version "0.3.29"
-  resolved "https://registry.yarnpkg.com/xpresser/-/xpresser-0.3.29.tgz#85b2dfced1239474aba5c2e0af82d66a7dbe8f9b"
-  integrity sha512-ytyeyle9N8Q3SgS8Wztt0M9dcWqd0SEIB7e+dsKQmhkg04ftd2/iH3s3Sb+QTbAIbhLFNtHMRfYzXETq7UIp/Q==
+xpresser@^0.3.30:
+  version "0.3.30"
+  resolved "https://registry.yarnpkg.com/xpresser/-/xpresser-0.3.30.tgz#a6038041c2c1c15c0e0b8dd20b304f3064f941e2"
+  integrity sha512-W++CEcdihqRkiyvF9QUYgSAuVzx9mbKvcvRXcsp090uGiD28TL0CENUUNTNt5g0GuN+3w2APv7/YC+n50vKp9A==
   dependencies:
     "@types/express" "^4.17.9"
     "@types/lodash" "^4.14.162"
