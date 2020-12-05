@@ -1,6 +1,6 @@
 import {$, pluginConfig} from "./config";
 import session = require("express-session");
-import {XSessionCustomStore} from "../custom-types";
+import type {XSessionCustomStore} from "../custom-types";
 
 export = (next: () => void): void => {
 

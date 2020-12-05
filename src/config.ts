@@ -3,7 +3,7 @@
  * --- Import plugin pluginConfig object.
  */
 import {getInstance, InXpresserError} from "xpresser";
-import {DollarSign} from "xpresser/types";
+import type {DollarSign} from "xpresser/types";
 import {namespace} from "../use.json"
 import importableConfig = require('./exports/config');
 
