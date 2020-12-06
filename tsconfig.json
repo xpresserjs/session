@@ -88,12 +88,15 @@
     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true,
     /* Disallow inconsistently-cased references to the same file. */
-    "types": [
-      "./xpresser"
-    ]
   },
   "exclude": [
     "types",
-    "dist"
+    "dist",
+  ],
+  "files": [
+    "./xpresser.d.ts"
+  ],
+  "include": [
+    "./**/*.ts"
   ]
 }

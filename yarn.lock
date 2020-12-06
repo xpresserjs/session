@@ -2946,10 +2946,10 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-xpresser@^0.3.33:
-  version "0.3.33"
-  resolved "https://registry.yarnpkg.com/xpresser/-/xpresser-0.3.33.tgz#c011f0d6a5635c9627755a57ff04f21d108c04d4"
-  integrity sha512-XNIpCqM3bCxp8IfJyaKL9GmEfAKZZYsB+cgpDjqnFE5nivYvRgXdMbK71Lc/rGyQOYlR4zi5H6q4YrFAqp2L2A==
+xpresser@^0.3.34:
+  version "0.3.34"
+  resolved "https://registry.yarnpkg.com/xpresser/-/xpresser-0.3.34.tgz#9647e2b2c07d346c2f3eb612b334829910155ba4"
+  integrity sha512-ieD/1ZZSx7pRr72JMBk+Y1Vi6Ch4lbdkI3ezSFA+4LcVn89Yt8DWUHQuZByDeUxITP8sz0HF92J7GLFeqn9wcg==
   dependencies:
     "@types/express" "^4.17.9"
     "@types/lodash" "^4.14.162"
