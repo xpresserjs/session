@@ -1,6 +1,9 @@
 import {Session, SessionData, SessionOptions} from "express-session";
 
-export type XSession = Session & Partial<SessionData>;
+export interface XSessionCustomData {
+}
+
+export type XSession = Session & Partial<SessionData> & XSessionCustomData;
 
 export type XSessionCustomStore = (
     use: (options?: SessionOptions) => any,
