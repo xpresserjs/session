@@ -91,12 +91,6 @@
   },
   "exclude": [
     "types",
-    "dist",
-  ],
-  "files": [
-    "./xpresser.d.ts"
-  ],
-  "include": [
-    "./**/*.ts"
+    "dist"
   ]
 }
