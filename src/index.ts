@@ -1,7 +1,7 @@
-import "../xpresser";
-import {$, pluginConfig} from "./config";
+import {pluginConfig} from "./config";
+import type {DollarSign} from "xpresser/types";
 
-export function run() {
+export function run(config: any, $: DollarSign) {
 
     /**
      * Check if plugin is enabled.

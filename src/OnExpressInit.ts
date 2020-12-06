@@ -1,8 +1,9 @@
-import {$, pluginConfig} from "./config";
+import {pluginConfig} from "./config";
 import session = require("express-session");
 import type {XSessionCustomStore} from "../custom-types";
+import type {DollarSign} from "xpresser/types";
 
-export = (next: () => void): void => {
+export = (next: () => void, $: DollarSign): void => {
 
     const lodash = $.modules.lodash();
     const useDefault = pluginConfig.get("useDefault");
