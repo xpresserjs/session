@@ -1,3 +1,4 @@
+import "../xpresser";
 import {$, pluginConfig} from "./config";
 
 export function run() {
