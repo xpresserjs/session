@@ -1,9 +1,9 @@
 import "xpresser/types/http";
-import {XSession} from "./custom-types";
+import {XSessionCustomData} from "./custom-types";
 
 declare module "xpresser/types/http" {
     interface Http {
-        session?: XSession
+        session?: XSessionCustomData
         sessionID?: string
     }
 }
