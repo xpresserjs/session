@@ -1,7 +1,7 @@
 {
   "name": "@xpresser/session",
   "version": "1.0.18",
-  "description": "Official session plugin for xpresserjs",
+  "description": "Official session plugin for xpresser(.js|.ts)",
   "main": "src/index.ts",
   "types": "types/src/index.d.ts",
   "repository": "https://github.com/xpresserjs/session",
@@ -11,6 +11,12 @@
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build"
   },
+  "keywords": [
+    "xpresserjs",
+    "xpresser",
+    "session",
+    "plugin"
+  ],
   "private": false,
   "devDependencies": {
     "@types/node": "^14.14.6",

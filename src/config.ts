@@ -34,8 +34,7 @@ if (foundConfigFile && typeof configFn !== "function") {
 
 if (foundConfigFile) {
     /**
-     * Merge with user defined configurations.
-     * Any exports associated with your plugin should be configurable @ {`plugins.your-plugin-name`} pluginConfig
+     * Merge with user defined values.
      */
     pluginConfig.merge(configFn($));
 }
