@@ -46,7 +46,11 @@ export = (next: () => void, $: DollarSign): void => {
                 $.logErrorAndExit(`Config: {session.customStore} only accepts false or function.`)
             }
 
-            $.app.use(customStore(session));
+            /**
+             * Returned all before calling,
+             * so that customStore can still keep its inheritance.
+             */
+            $.app.use(pluginConfig.all().customStore(session));
         }
     }
     return next();
