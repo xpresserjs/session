@@ -27,6 +27,7 @@
   "dependencies": {
     "@types/express-session": "^1.17.3",
     "connect-session-knex": "^2.0.0",
-    "express-session": "^1.17.1"
+    "express-session": "^1.17.1",
+    "sqlite3": "^5.0.0"
   }
 }
