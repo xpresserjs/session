@@ -1,6 +1,6 @@
 {
   "name": "@xpresser/session",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Official session plugin for xpresser(.js|.ts)",
   "main": "src/index.ts",
   "types": "types/src/index.d.ts",
