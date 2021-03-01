@@ -14,7 +14,8 @@ export function run(config: any, $: DollarSign) {
          */
         const useLanIpAsDomain = pluginConfig.get("useLanIpAsDomain");
         if (useLanIpAsDomain && $.engineData.has('lanIp')) {
-            $.on.start(require("./UseLanIpAsDomain"))
+            const UseLanIpAsDomain = require("./UseLanIpAsDomain");
+            UseLanIpAsDomain($);
         }
 
         /**
