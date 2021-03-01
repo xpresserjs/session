@@ -14,6 +14,11 @@ export = ($: DollarSign) => ({
     useDefault: true,
 
     /**
+     * Use LanIp as Domain (For Development)
+     */
+    useLanIpAsDomain: false,
+
+    /**
      * Session Configuration settings
      * The session plugin used is `express-session`
      *
@@ -64,4 +69,14 @@ export = ($: DollarSign) => ({
         });
     },
 
+
+    /**
+     * LanIpAsDomain Keys
+     * if useLanIpAsDomain is enabled, these keys in your config will be changed to your lanIp
+     * on boot.
+     */
+    useLanIpAsDomainKeys: [
+        "server.domain", // Main server domain
+        "session.cookie.domain" // Session cookie domain.
+    ]
 });

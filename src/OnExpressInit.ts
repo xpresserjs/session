@@ -35,7 +35,7 @@ export = (next: () => void, $: DollarSign): void => {
             {store}
         );
 
-        $.app.use(session(sessionConfig));
+        $.app!.use(session(sessionConfig));
     } else {
         /**
          * Check for custom session store
@@ -50,7 +50,7 @@ export = (next: () => void, $: DollarSign): void => {
              * Returned all before calling,
              * so that customStore can still keep its inheritance.
              */
-            $.app.use(pluginConfig.all().customStore(session));
+            $.app!.use(pluginConfig.all().customStore(session));
         }
     }
     return next();

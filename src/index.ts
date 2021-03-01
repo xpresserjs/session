@@ -8,10 +8,19 @@ export function run(config: any, $: DollarSign) {
      */
     const sessionIsEnabled = pluginConfig.get("enabled");
     if (sessionIsEnabled) {
+
+        /**
+         * Check if useLanIpAsDomain is enabled
+         */
+        const useLanIpAsDomain = pluginConfig.get("useLanIpAsDomain");
+        if (useLanIpAsDomain && $.engineData.has('lanIp')) {
+            $.on.start(require("./UseLanIpAsDomain"))
+        }
+
         /**
          * Register Session on expressInit
          */
-        $.on.expressInit(require('./OnExpressInit'))
+        $.on.expressInit(require("./OnExpressInit"));
     }
 
 }
