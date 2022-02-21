@@ -19,6 +19,11 @@ export = ($: DollarSign) => ({
     useLanIpAsDomain: false,
 
     /**
+     * Slugify the session name
+     */
+    slugifyName: true,
+
+    /**
      * Session Configuration settings
      * The session plugin used is `express-session`
      *
