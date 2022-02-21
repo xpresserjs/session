@@ -45,8 +45,8 @@ if (pluginConfig.exists(['sessionConfig.name', 'slugifyName'])) {
     pluginConfig.unset('slugifyName');
 
     // slugify name.
-    pluginConfig.set('name', slugify(
-        pluginConfig.get('name'),
+    pluginConfig.set('sessionConfig.name', slugify(
+        pluginConfig.get('sessionConfig.name'),
         {lower: true, trim: true}
     ));
 }
