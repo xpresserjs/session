@@ -6,6 +6,7 @@ import {getInstance, InXpresserError} from "xpresser";
 import type {DollarSign} from "xpresser/types";
 import {namespace} from "../use.json"
 import importableConfig = require('./exports/config');
+import slugify from "slugify";
 
 export const $ = getInstance();
 // Convert pluginConfig to collection.
@@ -37,4 +38,15 @@ if (foundConfigFile) {
      * Merge with user defined values.
      */
     pluginConfig.merge(configFn($));
+}
+
+// Check if slugifyName is enabled.
+if (pluginConfig.exists(['name', 'slugifyName'])) {
+    pluginConfig.unset('slugifyName');
+
+    // slugify name.
+    pluginConfig.set('name', slugify(
+        pluginConfig.get('name'),
+        {lower: true, trim: true}
+    ));
 }

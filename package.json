@@ -27,6 +27,7 @@
     "@types/express-session": "^1.17.4",
     "connect-session-knex": "^2.1.0",
     "express-session": "^1.17.2",
+    "slugify": "^1.6.5",
     "sqlite3": "5.0.2"
   }
 }
