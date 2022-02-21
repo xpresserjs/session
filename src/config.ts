@@ -41,7 +41,7 @@ if (foundConfigFile) {
 }
 
 // Check if slugifyName is enabled.
-if (pluginConfig.exists(['name', 'slugifyName'])) {
+if (pluginConfig.exists(['sessionConfig.name', 'slugifyName'])) {
     pluginConfig.unset('slugifyName');
 
     // slugify name.
