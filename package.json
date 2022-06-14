@@ -7,7 +7,7 @@
   "author": "xpresserjs",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "npx tsc",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
