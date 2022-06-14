@@ -1,10 +1,9 @@
-import {pluginConfig} from "./config";
+import { pluginConfig } from "./config";
 import session = require("express-session");
-import type {XSessionCustomStore} from "../custom-types";
-import type {DollarSign} from "xpresser/types";
+import type { XSessionCustomStore } from "../custom-types";
+import type { DollarSign } from "xpresser/types";
 
 export = (next: () => void, $: DollarSign): void => {
-
     const lodash = $.modules.lodash();
     const useDefault = pluginConfig.get("useDefault");
 
@@ -26,24 +25,20 @@ export = (next: () => void, $: DollarSign): void => {
 
         const store = new KnexSessionStore({
             knex: require("knex")(knexSessionConfig),
-            tablename: "sessions",
+            tablename: "sessions"
         });
 
-        const sessionConfig = lodash.extend(
-            {},
-            pluginConfig.get('sessionConfig'),
-            {store}
-        );
+        const sessionConfig = lodash.extend({}, pluginConfig.get("sessionConfig"), { store });
 
         $.app!.use(session(sessionConfig));
     } else {
         /**
          * Check for custom session store
          */
-        let customStore: XSessionCustomStore | false = pluginConfig.get('customStore', false)
+        let customStore: XSessionCustomStore | false = pluginConfig.get("customStore", false);
         if (customStore !== false) {
-            if (typeof customStore !== 'function') {
-                $.logErrorAndExit(`Config: {session.customStore} only accepts false or function.`)
+            if (typeof customStore !== "function") {
+                $.logErrorAndExit(`Config: {session.customStore} only accepts false or function.`);
             }
 
             /**
@@ -54,4 +49,4 @@ export = (next: () => void, $: DollarSign): void => {
         }
     }
     return next();
-}
+};

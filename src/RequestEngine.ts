@@ -1,5 +1,5 @@
 import type RequestEngine from "xpresser/src/RequestEngine";
-import type {XSession} from "../custom-types";
+import type { XSession } from "../custom-types";
 
 export = (RequestEngineClass: typeof RequestEngine) => {
     return class extends RequestEngineClass {
@@ -11,5 +11,5 @@ export = (RequestEngineClass: typeof RequestEngine) => {
             this.session = req.session ? req.session : {};
             this.sessionID = req.sessionID ? req.sessionID : null;
         }
-    }
-}
+    };
+};

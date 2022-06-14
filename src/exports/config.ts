@@ -1,8 +1,7 @@
-import type {SessionOptions} from "express-session";
-import type {DollarSign} from "xpresser/types";
+import type { SessionOptions } from "express-session";
+import type { DollarSign } from "xpresser/types";
 
 export = ($: DollarSign) => ({
-
     /**
      * Enable this plugin
      */
@@ -34,12 +33,12 @@ export = ($: DollarSign) => ({
     sessionConfig: <SessionOptions>{
         secret: "!XpresserSecretKey!",
         cookie: {
-            path: $.config.get('server.root'),
-            domain: $.config.get('server.domain'),
-            maxAge: 5000 * 60 * 24,
+            path: $.config.get("server.root"),
+            domain: $.config.get("server.domain"),
+            maxAge: 5000 * 60 * 24
         },
         resave: true,
-        saveUninitialized: true,
+        saveUninitialized: true
     },
 
     /**
@@ -55,11 +54,10 @@ export = ($: DollarSign) => ({
     storeConfig: {
         client: "sqlite3",
         connection: {
-            filename: $.path.frameworkStorageFolder("sessions.sqlite"),
+            filename: $.path.frameworkStorageFolder("sessions.sqlite")
         },
-        useNullAsDefault: true,
+        useNullAsDefault: true
     },
-
 
     /**
      * Use Custom Store instead of default store.
@@ -69,11 +67,10 @@ export = ($: DollarSign) => ({
         // const store = new YourCustomStore();
 
         return use({
-            ...this.sessionConfig,
+            ...this.sessionConfig
             // store,
         });
     },
-
 
     /**
      * LanIpAsDomain Keys

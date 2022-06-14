@@ -1,9 +1,9 @@
-import {pluginConfig} from "./config";
-import {DollarSign} from "xpresser/types";
+import { pluginConfig } from "./config";
+import { DollarSign } from "xpresser/types";
 
 export = ($: DollarSign): void => {
     // Get lanIp
-    const lanIp: string = $.engineData.get('lanIp');
+    const lanIp: string = $.engineData.get("lanIp");
     // Get config keys
     const useLanIpAsDomainKeys: string[] = pluginConfig.get("useLanIpAsDomainKeys");
     // Hold config update data.
@@ -16,4 +16,4 @@ export = ($: DollarSign): void => {
 
     // Update config
     $.config.set(configUpdate);
-}
+};
