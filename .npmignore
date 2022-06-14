@@ -1,2 +1,8 @@
 .idea
 node_modules
+yarn.lock
+
+
+*.ts
+!src/exports/config.ts
+*.d.ts

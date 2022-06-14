@@ -1,6 +1,6 @@
 {
   "namespace": "session",
-  "xpresser": ">=0.6.0",
+  "xpresser": ">=0.29.1",
   "use_index": "dist/src/index.js",
   "extends": {
     "RequestEngine": "dist/src/RequestEngine.js"
